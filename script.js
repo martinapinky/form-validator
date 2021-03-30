@@ -7,7 +7,7 @@ const message = document.getElementById('message');
 let isValid = false;
 let passwordsMatch = false;
 
-function validateForm() {
+const validateForm = () => {
     // Using Constraint API
     isValid = form.checkValidity();
     // Style main message for an error
@@ -39,19 +39,19 @@ function validateForm() {
     }
 }
 
- function storeFormData() {
-      const user = {
-          name: form.name.value,
-          phone: form.phone.value,
-          email: form.email.value,
-          website: form.website.value,
-          password: form.password.value
-      };
+const storeFormData = () => {
+    const user = {
+        name: form.name.value,
+        phone: form.phone.value,
+        email: form.email.value,
+        website: form.website.value,
+        password: form.password.value
+    };
     // Do something with user data
     console.log(user);
- }
+}
 
-function processFormData(e) {
+const processFormData = (e) => {
     e.preventDefault();
     // Validate Form
     validateForm();
